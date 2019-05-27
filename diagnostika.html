@@ -11,45 +11,50 @@
 
 <body>
      <!-- start header -->
-     <div class="container-fluid">
-        <header class="row shadow-sm flex-nowrap justify-content-center align-items-center header">
-
-            <div class="col-2 header__logo align-self-center">
-                <a href="index.html"><img src="img/logo.png" alt=""></a> 
+     <div class="container-fluid p-0">
+        <div class="shadow-sm">
+        <div class="container">
+        <header class="row align-items-center justify-content-md-between header">
+            <div
+                class=" order-md-0 order-3 col-md col-sm-12 header__logo justify-content-sm-center justify-content-md-start justify-content-center d-flex">
+               <a href="index.html"> <img src="img/logo.png" alt=""></a>
             </div>
 
-            <div class=" col-5 header__title align-self-center">
-                РЕМОНТ СВАРОЧНОГО ОБОРУДОВАНИЯ
+            <div class=" col header__title d-none d-sm-none d-md-block">
+                <div>РЕМОНТ СВАРОЧНОГО ОБОРУДОВАНИЯ</div>
             </div>
 
-            <div class="col-3 flex-column header__contact-information ">
+            <div
+                class=" order-md-3 order-0 col-sm-12 col-md-6  d-flex header__contact-information align-items-center justify-content-between flex-md-row">
+                <div class="col header__contact-information__block mr-sm-2 mr-md-0 mr-2">
+                    <div class="row header__contact-information__level-1 flex-nowrap">
 
-                <div class="row header__contact-information__level-1">
+                        <div class="col-1 header__contact-information__level-1__img d-none d-sm-none d-md-block">
+                            <img src="img/tel-rouge.png" alt="">
+                        </div>
 
-                    <div class="col-1 header__contact-information__level-1__img ">
-                        <img src="img/tel-rouge.png" alt="">
+                        <div class="col header__contact-information__level-1__phone-num p-0 p-sm-0 pl-md-3">
+                            <a href="tel:+7(343) 304-64-50"><b>(343)304-64-50</b></a>
+                        </div>
+
                     </div>
 
-                    <div class="col header__contact-information__level-1__phone-num">
-                        <a href="tel:+7(343) 304-64-50"><b>(343)304-64-50</b></a>
+                    <div class="col header__contact-information__level-2 d-none d-sm-none d-md-flex">
+                        <p>прием звонков: пн-пт с 9:00 до 18:00</p>
                     </div>
-
                 </div>
 
-                <div class="col header__contact-information__level-2">
-                    <p>прием звонков: пн-пт с 9:00 до 18:00</p>
+                <div
+                    class="header__contact-information__call-button justify-content-end d-flex d-sm-flex d-md-block">
+                    <a href="#popup1" class="btn btn-outline-danger" id="see-popup">Заказать звонок</a>
                 </div>
-
-            </div>
-
-            <div class="col-2 header__call-button ">
-                <input class="btn btn-outline-danger" type="button" value="Заказать звонок">
-            </div>
-
+        </div>
+    </div>
+</div>
         </header>
 
-        <nav class="menu">
-            <ul class="menu_item">
+        <nav class="container menu d-none d-sm-none d-md-flex p-0">
+            <ul class="p-0 menu_item">
                 <li class="menu__item__items ">
                     <a class="btn btn-light" href="diagnostika.html">Диагностика</a>
                 </li>
@@ -67,8 +72,84 @@
                 </li>
             </ul>
         </nav>
+        <nav class="menu-gamburger d-flex flex-column d-sm-flex d-md-none  justify-content-center">
+                <input type="checkbox" id="menu">
+                <label class="menu-gamburger__label d-flex" for="menu">
+                        <div class="menu-gamburger__label__adidas"></div></label>
+                <ul class="menu-gamburger__item">
+                    <li class="col menu-gamburger__item__items btn btn-light">
+                        <a class="col" href="diagnostika.html">Диагностика</a>
+                    </li>
+                    <li class="col menu-gamburger__item__items btn btn-light">
+                        <a class="col " href="remont.html">Ремонт</a>
+                    </li>
+                    <li class="col menu-gamburger__item__items btn btn-light">
+                        <a class="col" href="dostavka.html">Доставка</a>
+                    </li>
+                    <li class="col menu-gamburger__item__items btn btn-light">
+                        <a class="col" href="price.html">цены</a>
+                    </li>
+                    <li class="col menu-gamburger__item__items btn btn-light">
+                        <a class="col" href="kontakts.html">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
     </div>
-    <!-- end hedaer -->
+    <!-- start callback-PopUp -->
+    <div>
+        <a href="#x" class="overlay" id="popup1"></a>
+        <div class="callback-popup  flex-column col-9 col-sm-7 col-md-5 col-lg-3" id="popup1">
+            <div class="callback-popup__header d-flex">
+                <div class="callback-popup__header__img mr-2">
+                </div>
+                <div class="callback-popup__header__title d-flex flex-column justify-content-center">
+                    <div class="">Обратный звонок</div>
+                </div>
+                <a href="#close"
+                    class="callback-popup__header__exit align-items-center pt-3 btn-danger close ml-auto p-2"
+                    aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </a>
+            </div>
+            <div class="callback-popup__form d-flex">
+                <form class="d-flex flex-column  col" action="">
+                    <p>Ваше имя:<span>*</span></p>
+                    <input class="form-control" placeholder="ФИО" type="text">
+                    <p>Телефон:<span>*</span></p>
+                    <input class="form-control" type="text" placeholder="Телефон" id="phone_callback">
+                    <p>E-mail:</p>
+                    <input class="form-control" placeholder="Почта" type="text">
+                    <div class="callback-popup__form__conset d-flex align-items-center">
+                        <input type="checkbox" value="" id="agree">
+                        <label for="agree">Я согласен на обработку персональных данных</label>
+                    </div>
+                    <input class="btn btn-danger" type="submit" value="Отправить">
+                </form>
+            </div>
+        </div>
+        <!-- end callback-PopUp -->
+        <!-- start PopUp_messengers -->
+        <div>
+            <div class="popup">
+                <input type="checkbox" id="popup-checkbox">
+                <label class="popup__label shake animated delay-3s" for="popup-checkbox"> </label>
+                <span class="popup__tooltip">Получите консультации по ремонту</span>
+
+                <div class=" consult-block d-flex flex-column align-items-center">
+                    <div class="consult-block__buttons flex-column d-flex">
+                        <a class="consult-block__buttons__telegram btn btn-sm btn-primary mt-2 mb-2"><img
+                                src="img/Telegram_logo.svg" alt=""></a>
+                        <a class="consult-block__buttons__whatsapp btn btn-sm  btn-success mb-2"><img
+                                src="img/whatsapp_logo.svg" alt=""></a>
+                        <a class="consult-block__buttons__viber btn btn-sm mb-2"><img src="img/viber_logo.svg"
+                                alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- end PopUp_messengers -->
+        <!-- end hedaer -->
 
     <section class="content">
         <div class="content__description container">
@@ -82,40 +163,112 @@
                 диагностики будет известен срок и стоимость ремонта. Программная и аппаратная диагностика техники
                 выполняется БЕСПЛАТНО в случае дальнейшего ремонта в нашем сервисном центре.
             </div>
-            <div class="d-flex justify-content-center content__description__img">
+            <div class="d-flex content__description__img">
                 <img src="../img/newS.jpg" alt="">
             </div>
         </div>
     </section>
 
     <!-- START FOOTER -->
-    <footer class="footer d-flex justify-content-around">
-        <div class="col-4 footer__form-callback  flex-column ">
-            <div class="footer__form-callback__title ">Остались вопросы?</div>
-            <form action="">
-                <div>
-                    Ваше имя:*<br>
-                    <input class="form-control" type="text" name="" id="">
+    <footer class="footer">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-12 col-sm-8 col-md-4 footer__form-callback flex-column ">
+                    <div class="footer__form-callback__title ">Остались вопросы?</div>
+                    <form action="">
+                        <div>
+                            Ваше имя:<span>*</span><br>
+                            <input class="form-control" type="text" placeholder="ФИО" name="" id="">
+                        </div>
+                        <div>
+                            Мобильный телефон:<span>*</span><br>
+                            <input class="form-control" type="text" placeholder="Телефон" name="" id="phone_quest">
+                        </div>
+                        <div>
+                            Коментарий:<br>
+                            <textarea class="form-control" rows="5" name="" id="" cols="30" rows="10"></textarea>
+                        </div>
+                        <div>
+                            <input class="btn btn-outline-danger" type="submit" name="" id="" value="Отправить">
+                        </div>
+                    </form>
                 </div>
-                <div>
-                    Мобильный телефон:*<br>
-                    <input class="form-control" type="text" name="" id="">
+                <div class="col-5 align-self-center footer__text d-sm-none d-md-block d-none">
+                    Мы найдем для вас лучшие варианты поддержки. Свяжитесь с экспертом по телефону, по электронной почте
+                    или
+                    другим способом.
                 </div>
-                <div>
-                    Коментарий:<br>
-                    <textarea class="form-control" rows="5" name="" id="" cols="30" rows="10"></textarea>
-                </div>
-                <div>
-                    <input class="btn btn-outline-danger" type="submit" name="" id="" value="Отправить">
-                </div>
-            </form>
-        </div>
-        <div class="col-5 align-self-center footer__text">
-            Мы найдем для вас лучшие варианты поддержки. Свяжитесь с экспертом по телефону, по электронной почте или
-            другим способом.
+            </div>
         </div>
     </footer>
+
+    <div class="footer-maps">
+        <div class="container">
+            <div class="row pt-3 pb-3">
+                <div class=" order-md-0 order-sm-1 order-1 footer-maps__info col-12 col-sm-12 col-md-3 ">
+                    <div class="footer-maps__info__copyright">
+                        © 2019 Все права защищены.
+                    </div>
+                    <div>
+                        Политика конфиденциальности
+                    </div>
+                    <div class="footer-maps__info__promotion mt-3">
+                        <a href="https://promoexpert.pro/">
+                            Продвижение сайта <img class="col-md-6 col-sm-3  col-lg-5 col-xl-4 col-4 "
+                                title="Продвижение сайтов в Екатеринбурге" src="https://promoexpert.pro/img/logo.png"
+                                alt="Раскрутка сайта"></a>
+                    </div>
+                </div>
+
+                <div
+                    class="order-md-1 order-sm-0 order-0 footer-maps__map-site d-flex justify-content-between  col-12 col-sm-12 col-md-5 mr-5">
+                    <ul>
+                        <li>
+                            <a href="">Диагностика</a>
+                        </li>
+                        <li>
+                            <a href="">Ремонт</a>
+                        </li>
+                        <li>
+                            <a href="">Доставка</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="">Цены</a>
+                        </li>
+                        <li>
+                            <a href="">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="order-2 footer-maps__contacts justify-content-end col-12 col-sm-12 col-md">
+                    <div class="footer-maps__contacts__phone">
+                        <img class="mr-1" src="img/tel-rouge1.png" alt=""> <a
+                            href="tel:+7(343) 304-64-50">(343)304-64-50</a>
+                    </div>
+                    <div class="footer-maps__contacts__mail mt-2">
+                        <img class="mr-1" src="img/black-envelope.png" alt=""> <a
+                            href="mailto:ekb@shtorm-its.ru">ekb@shtorm-its.ru</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!-- END FOOTER -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script>
+         jQuery(function($) {
+    $("#phone_callback").mask("+7(099) 99-99-999");
+    $("#phone_remont").mask("+7(099) 99-99-999");
+    $("#phone_quest").mask("+7(099) 99-99-999");
+  });
+    </script>
 </body>
 
 </html>
