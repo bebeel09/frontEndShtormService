@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!-- start header -->
+    <div class="container-fluid">
+        <header class="row shadow-sm align-items-center header">
+
+            <div class="order-sm-0 order-md-0 order-3 col-md col-sm-6 header__logo justify-content-md-center d-flex">
+                <img src="img/logo.png" alt="">
+            </div>
+
+            <div class=" col header__title d-none d-sm-none d-md-block">
+                <div>РЕМОНТ СВАРОЧНОГО ОБОРУДОВАНИЯ</div>
+            </div>
+
+            <div
+                class=" order-sm-3 order-md-3 order-0 col-sm-6 d-flex header__contact-information align-items-center justify-content-around flex-md-row">
+                <div class="col header__contact-information__block mr-sm-3 mr-md-0 mr-3">
+                    <div class="row header__contact-information__level-1 flex-nowrap">
+
+                        <div class="col-1 header__contact-information__level-1__img d-none d-sm-none d-md-block">
+                            <img src="img/tel-rouge.png" alt="">
+                        </div>
+
+                        <div class="col header__contact-information__level-1__phone-num p-0 p-sm-0 pl-md-3">
+                            <a href="tel:+7(343) 304-64-50"><b>(343)304-64-50</b></a>
+                        </div>
+
+                    </div>
+
+                    <div class="col header__contact-information__level-2 d-none d-sm-none d-md-flex">
+                        <p>прием звонков: пн-пт с 9:00 до 18:00</p>
+                    </div>
+                </div>
+
+                <div class="col header__contact-information__call-button ">
+                    <input class="btn btn-outline-danger" type="button" value="Заказать звонок">
+                </div>
+
+            </div>
+        </header>
+
+        <nav class="menu d-none d-sm-none d-md-flex">
+            <ul class="menu_item">
+                <li class="menu__item__items ">
+                    <a class="btn btn-light" href="diagnostika.html">Диагностика</a>
+                </li>
+                <li class="menu__item__items">
+                    <a class="btn btn-light" href="remont.html">Ремонт</a>
+                </li>
+                <li class="menu__item__items">
+                    <a class="btn btn-light" href="dostavka.html">Доставка</a>
+                </li>
+                <li class="menu__item__items">
+                    <a class="btn btn-light" href="price.html">цены</a>
+                </li>
+                <li class="menu__item__items">
+                    <a class="btn btn-light" href="kontakts.html">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="menu-gamburger d-flex flex-column d-sm-flex d-md-none  justify-content-center">
+            <input type="checkbox" id="menu">
+            <label for="menu">Menu</label>
+            <ul class="menu-gamburger__item">
+                <li class="col menu-gamburger__item__items btn btn-light">
+                    <a class="col" href="diagnostika.html">Диагностика</a>
+                </li>
+                <li class="col menu-gamburger__item__items btn btn-light">
+                    <a class="col " href="remont.html">Ремонт</a>
+                </li>
+                <li class="col menu-gamburger__item__items btn btn-light">
+                    <a class="col" href="dostavka.html">Доставка</a>
+                </li>
+                <li class="col menu-gamburger__item__items btn btn-light">
+                    <a class="col" href="price.html">цены</a>
+                </li>
+                <li class="col menu-gamburger__item__items btn btn-light">
+                    <a class="col" href="kontakts.html">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- end hedaer -->
+
+    <section class="page-layout  flex-wrap">
+        <h1 class="page-layout__title">К сожалению ваш заказ по ремонту не найден</h1>
+        <div class="row justify-content-around p-3">
+            <div
+                class="justify-content-center page-layout__repair-block p-4 col-10 col-sm-10 col-md-5 col-lg-5 col-xl-3 d-flex flex-column ">
+                <p>Узнать статус ремонта</p>
+                <form class="page-layout__repair-block__form  d-flex flex-column  " action="">
+                    <input class="page-layout__repair-block__form__input form-control " placeholder="Номер ремонта"
+                        type="text">
+                    <input class="page-layout__repair-block__form__submit btn " type="submit" value="Подтвердить">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="status mt-2 mb-2">
+            <div class="m-3 p-2">
+
+
+                <div class="content__description__title">
+                    <h1>Ремонт №ШТ000000091</h1>
+                </div>
+                <div class="status__now mb-3">
+                    Текущий статус: отгружен
+                </div>
+                <div class="status__flags d-flex mb-2 align-items-center">
+                    <div class="status__flags__img flag-ok">
+                    </div>
+                    Принят в работу
+                </div>
+                <div class="status__flags d-flex mb-2 align-items-center">
+                    <div class="status__flags__img flag-no">
+                    </div>
+                    Диагностика завершена
+                </div>
+                <div class="status__flags d-flex mb-2 align-items-center">
+                        <div class="status__flags__img flag-no">
+                        </div>
+                        Принят в ремонт
+                    </div>
+                    <div class="status__flags d-flex mb-2 align-items-center">
+                            <div class="status__flags__img flag-no">
+                            </div>
+                            Готов к выдаче
+                        </div>
+                        <div class="status__flags d-flex mb-2 align-items-center">
+                                <div class="status__flags__img flag-no">
+                                </div>
+                                Выдан заказчику
+                            </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- START FOOTER -->
+    <footer class="footer d-flex justify-content-around">
+        <div class="col-4 footer__form-callback  flex-column ">
+            <div class="footer__form-callback__title ">Остались вопросы?</div>
+            <form action="">
+                <div>
+                    Ваше имя:*<br>
+                    <input class="form-control" type="text" name="" id="">
+                </div>
+                <div>
+                    Мобильный телефон:*<br>
+                    <input class="form-control" type="text" name="" id="">
+                </div>
+                <div>
+                    Коментарий:<br>
+                    <textarea class="form-control" rows="5" name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div>
+                    <input class="btn btn-outline-danger" type="submit" name="" id="" value="Отправить">
+                </div>
+            </form>
+        </div>
+        <div class="col-5 align-self-center footer__text">
+            Мы найдем для вас лучшие варианты поддержки. Свяжитесь с экспертом по телефону, по электронной почте или
+            другим способом.
+        </div>
+    </footer>
+    <!-- END FOOTER -->
+</body>
+
+</html>
